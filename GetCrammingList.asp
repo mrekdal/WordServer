@@ -1,16 +1,17 @@
-<!-- #include virtual="Include/Config.asp" -->
 <%
 
-Response.AddHeader "Access-Control-Allow-Origin","*"
-Response.ContentType = "application/json"
-Response.AddHeader "Content-Type", "application/json;charset=UTF-8"
-Response.CodePage = 65001
-Response.CharSet = "UTF-8"
+  Response.AddHeader "Access-Control-Allow-Origin","*"
+  Response.ContentType = "application/json"
+  Response.AddHeader "Content-Type", "application/json;charset=UTF-8"
+  Response.CodePage = 65001
+  Response.CharSet = "UTF-8"
 
   Dim strSQL
   Dim oConn
   Dim oRs
   Dim lAntallPoster
+
+  Const	PUBLIC_CONNECTION = "Provider=SQLOLEDB.1;Persist Security Info=False;Initial Catalog=WordTrainer;Data Source=tcp:route55.database.windows.net,1433;User ID=WebPublicUser@zdtr8sg87w;VeldigSikkertP@ssordSasckya2014!;"
   
   Set oConn = Server.CreateObject("ADODB.Connection")
   oConn.Open PUBLIC_CONNECTION
