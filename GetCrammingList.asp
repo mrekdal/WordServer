@@ -11,7 +11,7 @@
   Dim oRs
   Dim lAntallPoster
 
-  Const	PUBLIC_CONNECTION = "Provider=SQLOLEDB.1;Persist Security Info=False;Initial Catalog=WordTrainer;Data Source=tcp:route55.database.windows.net,1433;User ID=WebPublicUser@zdtr8sg87w;VeldigSikkertP@ssordSasckya2014!;"
+  Const	PUBLIC_CONNECTION = "Provider=SQLOLEDB.1;Persist Security Info=False;Initial Catalog=WordTrainer;Data Source=tcp:route55.database.windows.net,1433;User ID=WebPublicUser@zdtr8sg87w;Password=VeldigSikkertP@ssordSasckya2014!;"
   
   Set oConn = Server.CreateObject("ADODB.Connection")
   oConn.Open PUBLIC_CONNECTION
