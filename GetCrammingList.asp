@@ -16,7 +16,7 @@
   Set oConn = Server.CreateObject("ADODB.Connection")
   oConn.Open PUBLIC_CONNECTION
   
-  strSQL = "EXEC WebService.GetCrammingList " & CInt( Request("ListId") & ",2,3" )
+  strSQL = "EXEC WebService.GetCrammingList " & CInt( Request("ListId")) & ",2,3"
   Set oRs = oConn.Execute( strSQL, lAntallPoster, 1 )
   do while not oRs.EOF
     for each fld in oRs.Fields
